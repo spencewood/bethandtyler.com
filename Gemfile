@@ -1,7 +1,7 @@
 source :rubygems
 
-gem 'unicorn'
-gem 'jekyll'
+gem 'thin'
+gem 'rack-jekyll'
 gem 'RedCloth'
 gem 'less'
 gem 'therubyracer'
