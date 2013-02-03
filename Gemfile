@@ -1,4 +1,4 @@
 source :rubygems
 
-gem 'rack-jekyll'
-gem 'thin'
+gem 'unicorn'
+gem 'jekyll'
