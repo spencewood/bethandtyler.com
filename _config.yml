@@ -1,2 +1,2 @@
-markdown: maruku
-exclude: Gemfile Gemfile.lock Procfile config.ru
+exclude: ['public', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'Rakefile', 'unicorn.rb', 'config.ru', 'README.md']
+destination: 'public'
