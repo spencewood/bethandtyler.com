@@ -1,0 +1,97 @@
+html, body {
+	height: 100%;
+}
+
+body{
+	color: #FFFEFC;
+	text-align: center;
+	font-family: times;
+}
+
+/* Positioning containers */
+#container{
+	min-height: 100%;
+	background-color: #EED847;
+}
+
+.top-container{
+	background-color: #7F7A77;
+	width: 100%;
+	height: 200px;
+	border-bottom: 6px solid #FFF;
+	position: relative;
+}
+
+.bottom-container{
+	position: relative;
+	width: 100%;
+}
+
+.bottom-line-container{
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+}
+
+.top-line-container{
+	width: 100%;
+	position: absolute;
+	top: 0;
+}
+
+/* Braces */
+.brace{
+	position: absolute;
+	font-size: 250px;
+	top: -50px;
+}
+
+.brace-left{
+	left: -75px;
+}
+
+.brace-right{
+	right: -75px;
+}
+
+/* Content */
+.name-container{
+	margin: 0 auto;
+	height: 105px;
+	width: 400px;
+	position: relative;
+}
+
+.name{
+	font-family: 'Tangerine', cursive;
+	font-weight: 700;
+	font-size: 100px;
+	text-shadow: 2px 2px #635f5d;
+	position: absolute;
+}
+
+.name-one{
+	left: 20px;
+}
+
+.name-two{
+	right: 20px;
+}
+
+.and{
+	font-size: 110px;
+	color: #635f5d;
+}
+
+.date-container{
+	margin: 0 auto;
+	width: 400px;
+}
+
+.date{
+	font-family: 'Titillium Web', sans-serif;
+	font-weight: 900;
+	font-size: 40px;
+	text-shadow: 2px 2px #635f5d;
+	text-transform: uppercase;
+}
