@@ -41,6 +41,12 @@ h1{
 	width: 100%;
 }
 
+.footer-container{
+	background-color: #7F7A77;
+	height: 300px;
+	border-top: 6px solid #fff;
+}
+
 /* Braces */
 .brace{
 	position: absolute;
@@ -122,16 +128,37 @@ h1{
 }
 
 .body h2{
-	text-transform: uppercase;
-	font-weight: bold;
-	font-size: 30px;
-	border-bottom: 6px solid #fff;
+	font-weight: 700;
+	font-size: 42px;
+	color: #635f5d;
+	border-bottom: 2px solid #fff;
 }
 
+ul.block-list li{
+	overflow: hidden;
+	padding: 20px 0;
+}
+
+/* Events */
 ul.event-list{
 
 }
 
 ul.event-list li{
+}
 
+ul.event-list li h3{
+	font-size: 36px;
+}
+
+ul.event-list .box{
+	float: right;
+}
+
+/* Accommodations */
+ul.hotel-list{
+
+}
+
+ul.hotel-list li{
 }
