@@ -26,14 +26,19 @@ layout: default
 		<section>
 			<h2>Event Details</h2>
 			<ul class="block-list event-list">
+				<!-- add links to events -->
+				<!-- add api key for google maps -->
 				<li>
 					<div class="box fountain"></div>
 					<h3>Ceremony</h3>
 					<h4>Irvine Park</h4>
-					<address>
-						<div>251 Walnut St.</div>
-						<div>Saint Paul, MN 55102</div>
-					</address>
+					<div class="address-container">
+						<img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=A|FE6256|000000">
+						<address>
+							<div>251 Walnut St.</div>
+							<div>Saint Paul, MN 55102</div>
+						</address>
+					</div>
 					<span class="label">5:00 PM - 6:00 PM</span>
 				</li>
 				<li>
@@ -43,10 +48,13 @@ layout: default
 					<div class="box caves"></div>
 					<h3>Celebration</h3>
 					<h4>Wabasha Street Caves</h4>
-					<address>
-						<div>215 Wabasha St. S</div>
-						<div>Saint Paul, MN 55107</div>
-					</address>
+					<div class="address-container">
+						<img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=B|43AAFD|000000">
+						<address>
+							<div>215 Wabasha St. S</div>
+							<div>Saint Paul, MN 55107</div>
+						</address>
+					</div>
 					<span class="label">6:00 PM - 12:00 AM</span>
 				</li>
 			</ul>
@@ -59,22 +67,34 @@ layout: default
 			</p>-->
 			<ul class="block-list hotel-list">
 				<li>
-					<img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:red%7Clabel:A%7C44.944465,-93.092523&markers=color:blue%7Clabel:B%7C44.940767,-93.102254&markers=color:green%7Clabel:C%7C44.936066,-93.086858&zoom=14&size=220x200&sensor=false" class="map">
+					<!-- add links to maps -->
+					<img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:green%7Clabel:C%7C44.944465,-93.092523&markers=color:red%7Clabel:A%7C44.940767,-93.102254&markers=color:blue%7Clabel:B%7C44.936066,-93.086858&zoom=14&size=220x200&sensor=false" class="map">
 					<h3>Crowne Plaza</h3>
-					<a href="http://www.cpstpaul.com/" target="_blank">http://www.cpstpaul.com</a>
-					<address>
-						<div>11 Kellogg Boulevard E</div>
-						<div>Saint Paul, MN 55101</div>
-					</address>
+					<a href="http://www.cpstpaul.com/" target="_blank">www.cpstpaul.com</a>
+					<div class="address-container">
+						<img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=C|64B949|000000">
+						<address>
+							<div>11 Kellogg Boulevard E</div>
+							<div>Saint Paul, MN 55101</div>
+						</address>
+					</div>
+					<span class="label blue">shuttle</span>
+					<span class="label green">bride and groom staying here</span>
+					<span class="label blue">group rates</span>
 				</li>
 				<li>
-					<img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:red%7Clabel:A%7C44.944594,-93.103348&markers=color:blue%7Clabel:B%7C44.940767,-93.102254&markers=color:green%7Clabel:C%7C44.936066,-93.086858&zoom=14&size=220x200&sensor=false" class="map">
+					<img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:green%7Clabel:C%7C44.944594,-93.103348&markers=color:red%7Clabel:A%7C44.940767,-93.102254&markers=color:blue%7Clabel:B%7C44.936066,-93.086858&zoom=14&size=220x200&sensor=false" class="map">
 					<h3>Holiday Inn</h3>
-					<a href="http://www.holidayinn.com/hotels/us/en/st.-paul/mspal/hoteldetail">http://www.holidayinn.com</a>
-					<address>
-						<div>175 W 7th St.</div>
-						<div>Saint Paul, MN 55102</div>
-					</address>
+					<a href="http://www.holidayinn.com/hotels/us/en/st.-paul/mspal/hoteldetail">www.holidayinn.com</a>
+					<div class="address-container">
+						<img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=C|64B949|000000">
+						<address>
+							<div>175 W 7th St.</div>
+							<div>Saint Paul, MN 55102</div>
+						</address>
+					</div>
+					<span class="label blue">shuttle</span>
+					<span class="label blue">group rates</span>
 				</li>
 			</ul>
 		</section>

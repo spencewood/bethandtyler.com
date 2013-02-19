@@ -140,6 +140,26 @@ a:hover{
 	border-radius: 3px;
 }
 
+.label.green{
+	background-color: #468847;
+}
+
+.label.orange{
+	background-color: #f89406;
+}
+
+.label.red{
+	background-color: #b94a48;
+}
+
+.label.blue{
+	background-color: #3a87ad;
+}
+
+.label.black{
+	background-color: #333333;
+}
+
 /* Box pics */
 .box.fountain{
 	background-image: url(../images/fountain.png);
@@ -168,7 +188,7 @@ a:hover{
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 	background-color: #fff;
-	border: 2px solid #7F7A77;
+	border: 1px solid #999;
 	height: 140px;
 	width: 140px;
 }
@@ -195,6 +215,16 @@ ul.block-list{
 ul.block-list li{
 	overflow: hidden;
 	padding: 20px;
+}
+
+ul.block-list .address-container{
+
+}
+
+ul.block-list .address-container .pin{
+	float: left;
+	padding-top: 7px;
+	padding-right: 10px;
 }
 
 ul.block-list address{
@@ -241,4 +271,5 @@ ul.hotel-list .map{
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 	margin-right: 10px;
+	border: 1px solid #999;
 }
