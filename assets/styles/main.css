@@ -28,7 +28,9 @@ a:hover{
 /* Positioning containers */
 #container{
 	min-height: 100%;
-	background-color: #EED847;
+	/* YELLOW: #EED847 */
+	background-color: #CCCCFF;
+	background-image: url(../images/paper_fibers.png);
 }
 
 .top-container{
@@ -208,8 +210,9 @@ ul.block-list{
 	color: #999;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
-	border: 1px solid #efefef;
+	border: 1px solid #999;
 	background-color: #fff;
+	box-shadow: 5px 5px 5px #888;
 }
 
 ul.block-list li{
@@ -272,4 +275,10 @@ ul.hotel-list .map{
 	border-radius: 15px;
 	margin-right: 10px;
 	border: 1px solid #999;
+}
+
+/* Footer */
+footer .heart{
+	font-size: 200px;
+	font-family: sans-serif;
 }
