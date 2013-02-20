@@ -1,34 +1,34 @@
 <h2>Event Details</h2>
-<ul class="block-list event-list">
-    <!-- add links to events -->
-    <!-- add api key for google maps -->
+<ul class="block block-list event-list">
+    <!-- TODO: add links to events -->
+    <!-- TODO: add api key for google maps -->
     <li>
-        <div class="box fountain"></div>
+        <div class="box {{page.events.ceremony.image}}"></div>
         <h3>Ceremony</h3>
-        <h4>Irvine Park</h4>
+        <h4>{{page.events.ceremony.name}}</h4>
         <div class="address-container">
             <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=A|FE6256|000000">
             <address>
-                <div>251 Walnut St.</div>
-                <div>Saint Paul, MN 55102</div>
+                <div>{{page.events.ceremony.address1}}</div>
+                <div>{{page.events.ceremony.address2}}</div>
             </address>
         </div>
-        <span class="label">5:00 PM - 6:00 PM</span>
+        <span class="label">{{page.events.ceremony.time}}</span>
     </li>
     <li>
         <div class="tildes"></div>
     </li>
     <li>
-        <div class="box caves"></div>
+        <div class="box {{page.events.celebration.image}}"></div>
         <h3>Celebration</h3>
-        <h4>Wabasha Street Caves</h4>
+        <h4>{{page.events.celebration.name}}</h4>
         <div class="address-container">
             <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=B|43AAFD|000000">
             <address>
-                <div>215 Wabasha St. S</div>
-                <div>Saint Paul, MN 55107</div>
+                <div>{{page.events.celebration.address1}}</div>
+                <div>{{page.events.celebration.address2}}</div>
             </address>
         </div>
-        <span class="label">6:00 PM - 12:00 AM</span>
+        <span class="label">{{page.events.celebration.time}}</span>
     </li>
 </ul>

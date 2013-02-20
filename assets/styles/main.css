@@ -206,18 +206,29 @@ a:hover{
 	margin-bottom: 60px;
 }
 
-ul.block-list{
+.body section .block{
 	color: #999;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 	border: 1px solid #999;
 	background-color: #fff;
 	box-shadow: 5px 5px 5px #888;
+	padding: 10px 20px;
+}
+
+ul.block-list{
+
 }
 
 ul.block-list li{
 	overflow: hidden;
-	padding: 20px;
+	padding: 10px 0;
+}
+
+ul.block-list li:first-child,
+ul.block-list li:last-child,
+{
+	padding: 0;
 }
 
 ul.block-list .address-container{
@@ -275,6 +286,16 @@ ul.hotel-list .map{
 	border-radius: 15px;
 	margin-right: 10px;
 	border: 1px solid #999;
+}
+
+/* Gifts */
+.mono{
+	font-family: 'Cutive Mono', serif;
+	font-size: 16px;
+}
+
+.mono p{
+	padding-bottom: 10px;
 }
 
 /* Footer */

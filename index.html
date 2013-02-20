@@ -1,7 +1,24 @@
 ---
 layout: default
 title: "{ Beth &amp; Tyler }"
+
+events:
+    show: true
+    ceremony:
+        name: Irvine Park
+        image: fountain
+        address1: 251 Walnut St.
+        address2: Saint Paul, MN 55102
+        time: 5:00 PM - 6:00 PM
+    celebration:
+        name: Wabasha Street Caves
+        image: caves
+        address1: 215 Wabasha St. S
+        address2: Saint Paul, MN 55107
+        time: 6:00 PM - 12:00 AM
+
 hotels:
+    show: true
   - name: Crowne Plaza
     latlng: 44.944465,-93.092523
     link:
@@ -38,8 +55,16 @@ hotels:
     labels:
      - color: blue
        text: historic
+
+gifts:
+    show: false
+    text: |
+        Dear friends and family,
+
+        We are accepting gifts of thickness no greater than .0043 inches.
 ---
 
+<!-- TODO: might be nice to have scrollspy header -->
 <header class="top-container">
     <div class="bottom-line-container">
         <div class="name-container">
@@ -60,12 +85,21 @@ hotels:
         </div>
     </div>
     <div class="body">
+        {% if page.events.show %}
         <section>
             {% include events.html %}
         </section>
+        {% endif %}
+        {% if page.hotels.show %}
         <section>
             {% include accommodations.html %}
         </section>
+        {% endif %}
+        {% if page.gifts.show %}
+        <section>
+            {% include gifts.html %}
+        </section>
+        {% endif %}
     </div>
 </div>
 <footer class="footer-container">
