@@ -29,8 +29,9 @@ a:hover{
 #container{
 	min-height: 100%;
 	/* YELLOW: #EED847 */
-	background-color: #CCCCFF;
-	background-image: url(../images/paper_fibers.png);
+	/* PERRIWINKLE: #CCCCFF */
+	background-color: #EED847;
+	/* background-image: url(../images/paper_fibers.png); */
 }
 
 .top-container{
