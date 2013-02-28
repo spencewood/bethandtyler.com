@@ -3,7 +3,7 @@ layout: default
 title: "{ Beth &amp; Tyler }"
 
 events:
-    show: true
+    visible: true
     ceremony:
         name: Irvine Park
         image: fountain
@@ -18,8 +18,8 @@ events:
         time: 6:00 PM - 12:00 AM
 
 hotels:
-    show: true
   - name: Crowne Plaza
+    visible: true
     latlng: 44.944465,-93.092523
     link:
         text: www.cpstpaul.com
@@ -34,6 +34,7 @@ hotels:
       - color: green
         text: bride and groom staying here
   - name: Holiday Inn
+    visible: true
     latlng: 44.944594,-93.103348
     link:
         text: www.holidayinn.com
@@ -46,6 +47,7 @@ hotels:
      - color: blue
        text: group rates
   - name: The Saint Paul
+    visible: true
     latlng: 44.945043,-93.095977
     link:
         text: www.saintpaulhotel.com
@@ -57,7 +59,7 @@ hotels:
        text: historic
 
 gifts:
-    show: false
+    visible: true
     text: |
         Dear friends and family,
 
@@ -85,17 +87,15 @@ gifts:
         </div>
     </div>
     <div class="body">
-        {% if page.events.show %}
+        {% if page.events.visible %}
         <section>
             {% include events.html %}
         </section>
         {% endif %}
-        {% if page.hotels.show %}
         <section>
             {% include accommodations.html %}
         </section>
-        {% endif %}
-        {% if page.gifts.show %}
+        {% if page.gifts.visible %}
         <section>
             {% include gifts.html %}
         </section>
