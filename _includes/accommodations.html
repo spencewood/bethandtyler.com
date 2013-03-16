@@ -3,7 +3,7 @@
     {% for hotel in page.hotels %}
     {% if hotel.visible %}
     <li>
-        <img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:{{hotel.pincolor}}%7Clabel:{{hotel.pinlabel}}%7C{{hotel.latlng}}&markers=color:{{page.events.ceremony.pincolor}}%7Clabel:{{page.events.ceremony.pinlabel}}%7C{{page.events.ceremony.latlng}}&markers=color:{{page.events.celebration.pincolor}}%7Clabel:{{page.events.celebration.pinlabel}}%7C{{page.events.celebration.latlng}}&zoom=14&size=220x200&sensor=false" class="map">
+        <img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:{{hotel.pincolor}}%7Clabel:{{hotel.pinlabel}}%7C{{hotel.latlng}}&markers=color:{{page.events.ceremony.pincolor}}%7Clabel:{{page.events.ceremony.pinlabel}}%7C{{page.events.ceremony.latlng}}&markers=color:{{page.events.celebration.pincolor}}%7Clabel:{{page.events.celebration.pinlabel}}%7C{{page.events.celebration.latlng}}{% if page.rehersal.visible %}&markers=color:{{page.rehersal.pincolor}}%7Clabel:{{page.rehersal.pinlabel}}%7C{{page.rehersal.latlng}}{% endif %}&zoom=14&size=220x200&sensor=false" class="map">
         <h3>{{hotel.name}}</h3>
         <a href="{{hotel.link.href}}" target="_blank">{{hotel.link.text}}</a>
         <div class="address-container">

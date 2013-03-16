@@ -20,8 +20,14 @@ h1{
 	display: none;
 }
 
+h4{
+	font-weight: bold;
+	font-size: 26px;
+}
+
 address{
 	font-style: italic;
+	padding: 5px;
 }
 
 a{
@@ -241,18 +247,14 @@ ul.block-list li:first-child
 	padding: 0;
 }
 
-ul.block-list .address-container{
+.address-container{
 
 }
 
-ul.block-list .address-container .pin{
+.address-container .pin{
 	float: left;
 	padding-top: 7px;
 	padding-right: 10px;
-}
-
-ul.block-list address{
-	padding: 5px;
 }
 
 /* Events */
@@ -266,11 +268,6 @@ ul.event-list li{
 ul.event-list li h3{
 	font-family: 'Tangerine', cursive;
 	font-size: 36px;
-}
-
-ul.event-list li h4{
-	font-weight: bold;
-	font-size: 26px;
 }
 
 ul.event-list .box{
