@@ -1,17 +1,13 @@
 <h2>Accommodations</h2>
-<!--<p>
-    For those who are coming from out of town, there are several nearby
-    hotels to the events:
-</p>-->
 <ul class="block block-list hotel-list">
     {% for hotel in page.hotels %}
     {% if hotel.visible %}
     <li>
-        <img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:green%7Clabel:C%7C{{hotel.latlng}}&markers=color:red%7Clabel:A%7C44.940767,-93.102254&markers=color:blue%7Clabel:B%7C44.936066,-93.086858&zoom=14&size=220x200&sensor=false" class="map">
+        <img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:{{hotel.pincolor}}%7Clabel:{{hotel.pinlabel}}%7C{{hotel.latlng}}&markers=color:{{page.events.ceremony.pincolor}}%7Clabel:{{page.events.ceremony.pinlabel}}%7C{{page.events.ceremony.latlng}}&markers=color:{{page.events.celebration.pincolor}}%7Clabel:{{page.events.celebration.pinlabel}}%7C{{page.events.celebration.latlng}}&zoom=14&size=220x200&sensor=false" class="map">
         <h3>{{hotel.name}}</h3>
         <a href="{{hotel.link.href}}" target="_blank">{{hotel.link.text}}</a>
         <div class="address-container">
-            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=C|64B949|000000">
+            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld={{hotel.pinlabel}}|{{hotel.pinhex}}|000000">
             <address>
                 <div>{{hotel.address1}}</div>
                 <div>{{hotel.address2}}</div>
@@ -24,3 +20,6 @@
     {% endif %}
     {% endfor %}
 </ul>
+
+<!-- TODO: mention shuttles -->
+<!-- TODO: mention group rates -->

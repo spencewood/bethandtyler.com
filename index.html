@@ -2,6 +2,15 @@
 layout: default
 title: "{ Beth &amp; Tyler }"
 
+rehersal:
+    visible: true
+    name: Amsterdam Bar &amp; Hall
+    latlng: 44.946668,-93.095376
+    pincolor: yellow
+    pinlabel: A
+    link: 
+        text: www.amsterdambarandhall.com
+        href: http://www.amsterdambarandhall.com
 events:
     visible: true
     ceremony:
@@ -10,17 +19,28 @@ events:
         address1: 251 Walnut St.
         address2: Saint Paul, MN 55102
         time: 5:00 PM - 6:00 PM
+        latlng: 44.940767,-93.102254
+        pincolor: red
+        pinhex: FE6256
+        pinlabel: B
     celebration:
         name: Wabasha Street Caves
         image: caves
         address1: 215 Wabasha St. S
         address2: Saint Paul, MN 55107
         time: 6:00 PM - 12:00 AM
+        latlng: 44.936066,-93.086858
+        pincolor: blue
+        pinhex: 43AAFD
+        pinlabel: C
 
 hotels:
   - name: Crowne Plaza
     visible: true
     latlng: 44.944465,-93.092523
+    pincolor: green
+    pinhex: 64B949
+    pinlabel: D
     link:
         text: www.cpstpaul.com
         href: http://www.cpstpaul.com/
@@ -33,30 +53,6 @@ hotels:
         text: group rates
       - color: green
         text: bride and groom staying here
-  - name: Holiday Inn
-    visible: true
-    latlng: 44.944594,-93.103348
-    link:
-        text: www.holidayinn.com
-        href: http://www.holidayinn.com/hotels/us/en/st.-paul/mspal/hoteldetail
-    address1: 175 W 7th St
-    address2: Saint Paul, MN 55102
-    labels:
-     - color: blue
-       text: shuttle
-     - color: blue
-       text: group rates
-  - name: The Saint Paul
-    visible: true
-    latlng: 44.945043,-93.095977
-    link:
-        text: www.saintpaulhotel.com
-        href: https://www.saintpaulhotel.com/
-    address1: 350 Market St.
-    address2: Saint Paul, MN 55102
-    labels:
-     - color: blue
-       text: historic
 
 gifts:
     visible: true
@@ -87,6 +83,11 @@ gifts:
         </div>
     </div>
     <div class="body">
+        {% if page.rehersal.visible %}
+        <section>
+            {% include rehersal.html %}
+        </section>
+        {% endif %}
         {% if page.events.visible %}
         <section>
             {% include events.html %}

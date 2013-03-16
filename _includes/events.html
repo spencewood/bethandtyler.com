@@ -1,4 +1,7 @@
-<h2>Event Details</h2>
+<div class="title-container">
+    <span class="event-date">July 5th</span>
+    <h2>Event Details</h2>
+</div>
 <ul class="block block-list event-list">
     <!-- TODO: add links to events -->
     <!-- TODO: add api key for google maps -->
@@ -7,7 +10,7 @@
         <h3>Ceremony</h3>
         <h4>{{page.events.ceremony.name}}</h4>
         <div class="address-container">
-            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=A|FE6256|000000">
+            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld={{page.events.ceremony.pinlabel}}|{{page.events.ceremony.pinhex}}|000000">
             <address>
                 <div>{{page.events.ceremony.address1}}</div>
                 <div>{{page.events.ceremony.address2}}</div>
@@ -23,7 +26,7 @@
         <h3>Celebration</h3>
         <h4>{{page.events.celebration.name}}</h4>
         <div class="address-container">
-            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld=B|43AAFD|000000">
+            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld={{page.events.celebration.pinlabel}}|{{page.events.celebration.pinhex}}|000000">
             <address>
                 <div>{{page.events.celebration.address1}}</div>
                 <div>{{page.events.celebration.address2}}</div>
