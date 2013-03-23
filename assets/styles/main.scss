@@ -7,230 +7,236 @@ $dark_gray: #635f5d;
 $blue: #8492F0;
 
 html, body {
-	height: 100%;
+    height: 100%;
 }
 
 body{
-	color: $white;
-	text-align: center;
-	font-family: times;
+    color: $white;
+    text-align: center;
+    font-family: times;
 }
 
 h1{
-	display: none;
+    display: none;
 }
 
 h4{
-	font-weight: bold;
-	font-size: 26px;
+    font-weight: bold;
+    font-size: 26px;
 }
 
 address{
-	font-style: italic;
-	padding: 5px;
+    font-style: italic;
+    padding: 5px;
 }
 
 a{
-	color: $blue;
-	text-decoration: none;
+    color: $blue;
+    text-decoration: none;
 }
 
 a:hover{
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 /* Positioning containers */
 #container{
-	min-height: 100%;
-	background-color: $yellow;
-	/* background-image: url(../images/paper_fibers.png); */
+    min-height: 100%;
+    background-color: $yellow;
+    /* background-image: url(../images/paper_fibers.png); */
 }
 
 .top-container{
-	background-color: $gray;
-	width: 100%;
-	height: 200px;
-	border-bottom: 14px solid #FFF;
-	position: relative;
+    background-color: $gray;
+    width: 100%;
+    height: 200px;
+    border-bottom: 14px solid #FFF;
+    position: relative;
 }
 
 .bottom-container{
-	position: relative;
-	width: 100%;
+    position: relative;
+    width: 100%;
 }
 
 .bottom-line-container{
-	width: 100%;
-	position: absolute;
-	bottom: 0;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
 }
 
 .top-line-container{
-	width: 100%;
+    width: 100%;
 }
 
 .footer-container{
-	background-color: $gray;
-	height: 300px;
-	border-top: 9px solid #fff;
+    background-color: $gray;
+    height: 300px;
+    border-top: 9px solid #fff;
 }
 
 .title-container{
-	position: relative;
+    position: relative;
 }
 
 /* Braces */
 .brace{
-	font-family: 'Brawler', serif;
-	position: absolute;
-	font-size: 400px;
-	top: -129px;
+    font-family: 'Brawler', serif;
+    position: absolute;
+    font-size: 400px;
+    top: -129px;
 }
 
 .brace-left{
-	left: -200px;
+    left: -200px;
 }
 
 .brace-right{
-	right: -200px;
+    right: -200px;
 }
 
 /* Header content */
 .name-container{
-	margin: 0 auto;
-	height: 105px;
-	width: 400px;
-	position: relative;
+    margin: 0 auto;
+    height: 105px;
+    width: 400px;
+    position: relative;
 }
 
 .name{
-	font-family: 'Tangerine', cursive;
-	font-weight: 700;
-	font-size: 100px;
-	text-shadow: 2px 2px $dark_gray;
-	position: absolute;
+    font-family: 'Tangerine', cursive;
+    font-weight: 700;
+    font-size: 100px;
+    text-shadow: 2px 2px $dark_gray;
+    position: absolute;
 }
 
 .name-one{
-	left: 20px;
+    left: 20px;
 }
 
 .name-two{
-	right: 20px;
+    right: 20px;
 }
 
 .and{
-	font-size: 110px;
-	color: $dark_gray;
+    font-size: 110px;
+    color: $dark_gray;
 }
 
 .blurb{
-	font-family: 'Diplomata SC', cursive;
-	color: #efefef;
-	font-size: 26px;
+    font-family: 'Diplomata SC', cursive;
+    color: #efefef;
+    font-size: 26px;
 }
 
 .date-container{
-	margin: 0 auto;
-	width: 400px;
+    margin: 0 auto;
+    width: 400px;
 }
 
 .date{
-	font-family: 'Six Caps', sans-serif;
-	font-size: 100px;
-	text-transform: uppercase;
-	color: $dark_gray;
+    font-family: 'Six Caps', sans-serif;
+    font-size: 100px;
+    text-transform: uppercase;
+    color: $dark_gray;
 }
+
+/* Register */
+#register-container{
+    margin: 0 auto;
+}
+
 
 /* Flair */
 .label{
-	display: inline-block;
-	padding: 2px 4px;
-	font-size: 11.844px;
-	font-weight: bold;
-	line-height: 14px;
-	color: #ffffff;
-	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-	white-space: nowrap;
-	vertical-align: baseline;
-	background-color: #999999;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
+    display: inline-block;
+    padding: 2px 4px;
+    font-size: 11.844px;
+    font-weight: bold;
+    line-height: 14px;
+    color: #ffffff;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #999999;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 
 .label.green{
-	background-color: #468847;
+    background-color: #468847;
 }
 
 .label.orange{
-	background-color: #f89406;
+    background-color: #f89406;
 }
 
 .label.red{
-	background-color: #b94a48;
+    background-color: #b94a48;
 }
 
 .label.blue{
-	background-color: #3a87ad;
+    background-color: #3a87ad;
 }
 
 .label.black{
-	background-color: #333333;
+    background-color: #333333;
 }
 
 /* Box pics */
 .box.fountain{
-	background-image: url(../images/fountain.png);
+    background-image: url(../images/fountain.png);
 }
 
 .box.caves{
-	background-image: url(../images/caves.png);
+    background-image: url(../images/caves.png);
 }
 
 .tildes{
-	background-image: url(../images/tilde.png);
-	background-repeat: repeat;
-	height: 21px;
+    background-image: url(../images/tilde.png);
+    background-repeat: repeat;
+    height: 21px;
 }
 
 /* Body content */
 .body{
-	margin: 0 auto;
-	margin-top: 100px;
-	width: 500px;
-	text-align: left;
-	font-family: 'Brawler', serif;
+    margin: 0 auto;
+    margin-top: 100px;
+    width: 500px;
+    text-align: left;
+    font-family: 'Brawler', serif;
 }
 
 .box{
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	background-color: #fff;
-	border: 1px solid #999;
-	height: 140px;
-	width: 140px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background-color: #fff;
+    border: 1px solid #999;
+    height: 140px;
+    width: 140px;
 }
 
 .body h2{
-	font-weight: 700;
-	font-size: 42px;
-	color: #635f5d;
-	padding: 10px 0;
+    font-weight: 700;
+    font-size: 42px;
+    color: #635f5d;
+    padding: 10px 0;
 }
 
 .body section{
-	margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 
 .body section .block{
-	color: #999;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	border: 1px solid #999;
-	background-color: #fff;
-	box-shadow: 5px 5px 5px #888;
-	padding: 10px 20px;
+    color: #999;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    border: 1px solid #999;
+    background-color: #fff;
+    box-shadow: 5px 5px 5px #888;
+    padding: 10px 20px;
 }
 
 ul.block-list{
@@ -238,13 +244,13 @@ ul.block-list{
 }
 
 ul.block-list li{
-	overflow: hidden;
-	padding: 10px 0;
+    overflow: hidden;
+    padding: 10px 0;
 }
 
 ul.block-list li:first-child
 {
-	padding: 0;
+    padding: 0;
 }
 
 .address-container{
@@ -252,9 +258,9 @@ ul.block-list li:first-child
 }
 
 .address-container .pin{
-	float: left;
-	padding-top: 7px;
-	padding-right: 10px;
+    float: left;
+    padding-top: 7px;
+    padding-right: 10px;
 }
 
 /* Events */
@@ -266,20 +272,20 @@ ul.event-list li{
 }
 
 ul.event-list li h3{
-	font-family: 'Tangerine', cursive;
-	font-size: 36px;
+    font-family: 'Tangerine', cursive;
+    font-size: 36px;
 }
 
 ul.event-list .box{
-	float: right;
+    float: right;
 }
 
 .event-date{
-	position: absolute;
-	bottom: 10px;
-	right: 0;
-	font-size: 21px;
-	color: $gray;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    font-size: 21px;
+    color: $gray;
 }
 
 /* Accommodations */
@@ -291,30 +297,30 @@ ul.hotel-list li{
 }
 
 ul.hotel-list li h3{
-	font-weight: bold;
-	font-size: 26px;
+    font-weight: bold;
+    font-size: 26px;
 }
 
 ul.hotel-list .map{
-	float: left;
-	-moz-border-radius: 15px;
-	border-radius: 15px;
-	margin-right: 10px;
-	border: 1px solid #999;
+    float: left;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    margin-right: 10px;
+    border: 1px solid #999;
 }
 
 /* Gifts */
 .mono{
-	font-family: 'Cutive Mono', serif;
-	font-size: 16px;
+    font-family: 'Cutive Mono', serif;
+    font-size: 16px;
 }
 
 .mono p{
-	padding-bottom: 10px;
+    padding-bottom: 10px;
 }
 
 /* Footer */
 footer .heart{
-	font-size: 200px;
-	font-family: sans-serif;
+    font-size: 200px;
+    font-family: sans-serif;
 }
