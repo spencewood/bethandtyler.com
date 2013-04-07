@@ -10,7 +10,7 @@ rehersal:
     latlng: 44.946668,-93.095376
     pincolor: yellow
     pinhex: FBF256
-    pinlabel: A
+    pinlabel: 0
     link: 
         text: www.amsterdambarandhall.com
         href: http://www.amsterdambarandhall.com
@@ -25,7 +25,7 @@ events:
         latlng: 44.940767,-93.102254
         pincolor: red
         pinhex: FE6256
-        pinlabel: B
+        pinlabel: A
     celebration:
         name: Wabasha Street Caves
         image: caves
@@ -35,7 +35,7 @@ events:
         latlng: 44.936066,-93.086858
         pincolor: blue
         pinhex: 43AAFD
-        pinlabel: C
+        pinlabel: B
 
 hotels:
   - name: Crowne Plaza
@@ -43,7 +43,7 @@ hotels:
     latlng: 44.944465,-93.092523
     pincolor: green
     pinhex: 64B949
-    pinlabel: D
+    pinlabel: C
     link:
         text: www.cpstpaul.com
         href: http://www.cpstpaul.com/
@@ -88,6 +88,9 @@ gifts:
     <div class="body">
         <section>
             {% include image-slideshow.html %}
+        </section>
+        <section>
+            {% include rsvp.html %}
         </section>
         {% if page.rehersal.visible %}
         <section>

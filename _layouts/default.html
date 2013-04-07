@@ -23,4 +23,35 @@
 			{% include footer.html %}
 		</div>
 	</body>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
+	<script>
+		(function () {
+			var rsvp = {
+				showEvent: function (e){
+					e.preventDefault();
+					this.show();
+				},
+
+				show: function () {
+					var $form = $('#rsvp .rsvp-form').css({
+						visibility: 'hidden'
+					}).show();
+
+					var height = $form.height();
+
+					$form.css({
+						height: 0,
+						visibility: 'visible',
+						overflow: 'hidden'
+					})
+
+					$form.animate({
+						height: height
+					}, 1000);
+				}
+			};
+
+			$('#rsvp-link').on('click', rsvp.showEvent.bind(rsvp));
+		})();
+	</script>
 </html>

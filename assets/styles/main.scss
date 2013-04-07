@@ -1,10 +1,6 @@
 @import "reset";
-
-$yellow: #EED847;
-$white: #FFFEFC;
-$gray: #7F7A77;
-$dark_gray: #635f5d;
-$blue: #8492F0;
+@import "bootstrap-extras";
+@import "colors";
 
 html, body {
     height: 100%;
@@ -147,44 +143,6 @@ a:hover{
     margin: 0 auto;
 }
 
-
-/* Flair */
-.label{
-    display: inline-block;
-    padding: 2px 4px;
-    font-size: 11.844px;
-    font-weight: bold;
-    line-height: 14px;
-    color: #ffffff;
-    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-    white-space: nowrap;
-    vertical-align: baseline;
-    background-color: #999999;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-}
-
-.label.green{
-    background-color: #468847;
-}
-
-.label.orange{
-    background-color: #f89406;
-}
-
-.label.red{
-    background-color: #b94a48;
-}
-
-.label.blue{
-    background-color: #3a87ad;
-}
-
-.label.black{
-    background-color: #333333;
-}
-
 /* Box pics */
 .box.fountain{
     background-image: url(../images/fountain.png);
@@ -261,6 +219,20 @@ ul.block-list li:first-child
     float: left;
     padding-top: 7px;
     padding-right: 10px;
+}
+
+/* RSVP */
+#rsvp legend {
+    font-family: 'Tangerine', cursive;
+    font-size: 32px;
+    padding-left: 40px;
+}
+
+.rsvp-form{
+    background-color: #fff;
+    color: $dark_gray;
+    display: none;
+    border: 1px solid #999;
 }
 
 /* Events */
