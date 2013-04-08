@@ -1,83 +1,29 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link href='http://fonts.googleapis.com/css?family=Brawler|Tangerine:700|Diplomata+SC|Six+Caps|Cutive+Mono' rel='stylesheet' type='text/css'>
-		<link href="/assets/styles/main.css" rel="stylesheet">
-		<script type="text/javascript">
-			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', 'UA-530693-9']);
-			_gaq.push(['_trackPageview']);
-			(function() {
-				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-			})();
-		</script>
-		<title>{{ page.title }}</title>
-		<!-- TODO: favicon would be nice -->
-	</head>
-	<body>
-		<div id="container">
-			{{ content }}
+    <head>
+        <link href='http://fonts.googleapis.com/css?family=Brawler|Tangerine:700|Diplomata+SC|Six+Caps|Cutive+Mono' rel='stylesheet' type='text/css'>
+        <link href="/assets/styles/main.css" rel="stylesheet">
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-530693-9']);
+            _gaq.push(['_trackPageview']);
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+        <title>{{ page.title }}</title>
+        <!-- TODO: favicon would be nice -->
+    </head>
+    <body>
+        <div id="container">
+            {{ content }}
 
-			{% include footer.html %}
-		</div>
-	</body>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
-	<script>
-		(function () {
-			var $rsvpLink = $('#rsvp-link');
-			var $formContainer = $('#rsvp .rsvp-form');
-			var $form = $('form', $formContainer);
-
-			var rsvp = {
-				init: function () {
-					this.bindEvents();
-				},
-
-				bindEvents: function (){
-					$rsvpLink.on('click', this.showEvent.bind(this));
-					$form.on('submit', this.submitEvent.bind(this));
-				},
-
-				showEvent: function (e){
-					e.preventDefault();
-					this.show();
-				},
-
-				submitEvent: function (e){
-					e.preventDefault();
-					this.submit();
-				},
-
-				submit: function () {
-					$.post($form.attr('action'), $form.serialize(), function(d) {
-						console.log(d);
-					});
-				},
-
-				show: function () {
-					$rsvpLink.hide();
-
-					$formContainer.css({
-						visibility: 'hidden'
-					}).show();
-
-					var height = $formContainer.height();
-
-					$formContainer.css({
-						height: 0,
-						visibility: 'visible',
-						overflow: 'hidden'
-					})
-
-					$formContainer.animate({
-						height: height
-					}, 1000);
-				}
-			};
-
-			rsvp.init();
-		})();
-	</script>
+            {% include footer.html %}
+        </div>
+    </body>
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/js/bootstrap.min.js"></script>
+    <script src="/assets/scripts/main.js"></script>
 </html>

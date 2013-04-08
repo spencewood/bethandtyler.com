@@ -14,7 +14,7 @@
             </address>
         </div>
         {% for label in hotel.labels %}
-        <span class="label {{label.color}}">{{label.text}}</span>
+        <span class="label label-{{label.type}}">{{label.text}}</span>
         {% endfor %}
     </li>
     {% endif %}

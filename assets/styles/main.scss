@@ -1,5 +1,5 @@
 @import "reset";
-@import "bootstrap-extras";
+@import "bootstrap";
 @import "colors";
 
 html, body {
@@ -10,6 +10,11 @@ body{
     color: $white;
     text-align: center;
     font-family: times;
+    line-height: normal;
+}
+
+ul{
+    margin: 0;
 }
 
 h1{
@@ -24,6 +29,7 @@ h4{
 address{
     font-style: italic;
     padding: 5px;
+    margin: 0;
 }
 
 a{
@@ -233,6 +239,14 @@ ul.block-list li:first-child
     color: $dark_gray;
     display: none;
     border: 1px solid #999;
+}
+
+#rsvpModal{
+    color: #000;
+}
+
+#rsvpModal form{
+    margin: 0;
 }
 
 /* Events */
