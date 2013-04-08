@@ -26,32 +26,58 @@
 	<script src="//cdnjs.cloudflare.com/ajax/libs/zepto/1.0/zepto.min.js"></script>
 	<script>
 		(function () {
+			var $rsvpLink = $('#rsvp-link');
+			var $formContainer = $('#rsvp .rsvp-form');
+			var $form = $('form', $formContainer);
+
 			var rsvp = {
+				init: function () {
+					this.bindEvents();
+				},
+
+				bindEvents: function (){
+					$rsvpLink.on('click', this.showEvent.bind(this));
+					$form.on('submit', this.submitEvent.bind(this));
+				},
+
 				showEvent: function (e){
 					e.preventDefault();
 					this.show();
 				},
 
+				submitEvent: function (e){
+					e.preventDefault();
+					this.submit();
+				},
+
+				submit: function () {
+					$.post($form.attr('action'), $form.serialize(), function(d) {
+						console.log(d);
+					});
+				},
+
 				show: function () {
-					var $form = $('#rsvp .rsvp-form').css({
+					$rsvpLink.hide();
+
+					$formContainer.css({
 						visibility: 'hidden'
 					}).show();
 
-					var height = $form.height();
+					var height = $formContainer.height();
 
-					$form.css({
+					$formContainer.css({
 						height: 0,
 						visibility: 'visible',
 						overflow: 'hidden'
 					})
 
-					$form.animate({
+					$formContainer.animate({
 						height: height
 					}, 1000);
 				}
 			};
 
-			$('#rsvp-link').on('click', rsvp.showEvent.bind(rsvp));
+			rsvp.init();
 		})();
 	</script>
 </html>
