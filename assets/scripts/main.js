@@ -77,6 +77,15 @@
             $('.alert', $formContainer).remove();
         },
 
+        validate: function () {
+            $('input[data-required]').each(function () {
+                var $el = $(this);
+                if($el.val().length === 0){
+                    
+                }
+            });
+        },
+
         show: function () {
             $formContainer.modal();
         }
