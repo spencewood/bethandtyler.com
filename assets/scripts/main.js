@@ -3,6 +3,9 @@
     var $modal = $('#rsvpModal');
     var $form = $('form', $modal);
 
+    /**
+     * RSVP module
+     */
     var rsvp = {
         init: function () {
             this.bindEvents();
@@ -99,5 +102,18 @@
         }
     };
 
+    /**
+     * Slideshow module
+     */
+    var slideshow = {
+        init: function () {
+            $('#slides').slidesjs({
+                width: 940,
+                height: 528
+            });
+        }
+    };
+
     rsvp.init();
+    slideshow.init();
 })(jQuery);

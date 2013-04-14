@@ -2,6 +2,15 @@
 layout: default
 title: "{ Beth &amp; Tyler }"
 
+slideshow:
+    visible: true
+    images:
+     - src: http://placehold.it/940x528
+     - src: http://placehold.it/940x528
+     - src: http://placehold.it/940x528
+     - src: http://placehold.it/940x528
+     - src: http://placehold.it/940x528
+
 rehersal:
     visible: false
     name: 
@@ -14,6 +23,7 @@ rehersal:
     link: 
         text: 
         href: 
+
 events:
     visible: true
     ceremony:
@@ -86,9 +96,11 @@ gifts:
         </div>
     </div>
     <div class="body">
+        {% if page.slideshow.visible %}
         <section>
             {% include image-slideshow.html %}
         </section>
+        {% endif %}
         <section>
             {% include rsvp.html %}
         </section>

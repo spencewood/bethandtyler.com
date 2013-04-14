@@ -1,1 +1,5 @@
-<div id="slides"></div>
+<div id="slides">
+    {% for image in page.slideshow.images %}
+    <img src="{{ image.src }}">
+    {% endfor %}
+</div>
