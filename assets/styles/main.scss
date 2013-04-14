@@ -181,7 +181,7 @@ a:hover{
     -moz-border-radius: 15px;
     border-radius: 15px;
     background-color: #fff;
-    border: 1px solid #999;
+    border: 1px solid $mid_gray;
     height: 140px;
     width: 140px;
 }
@@ -198,10 +198,10 @@ a:hover{
 }
 
 .body section .block{
-    color: #999;
+    color: $mid_gray;
     -moz-border-radius: 15px;
     border-radius: 15px;
-    border: 1px solid #999;
+    border: 1px solid $mid_gray;
     background-color: #fff;
     box-shadow: 5px 5px 5px #888;
     padding: 20px;
@@ -242,7 +242,7 @@ ul.block-list li:first-child
     background-color: #fff;
     color: $dark_gray;
     display: none;
-    border: 1px solid #999;
+    border: 1px solid $mid_gray;
 }
 
 #rsvpModal{
@@ -300,7 +300,7 @@ ul.hotel-list .map{
     -moz-border-radius: 15px;
     border-radius: 15px;
     margin-right: 10px;
-    border: 1px solid #999;
+    border: 1px solid $mid_gray;
 }
 
 /* Gifts */

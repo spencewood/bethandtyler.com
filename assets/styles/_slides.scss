@@ -1,23 +1,65 @@
+@import "colors";
+
 #slides {
-  display: none;
+  display: none
 }
 
 #slides .slidesjs-navigation {
-  margin-top:3px;
+  margin-top:5px;
 }
 
-#slides .slidesjs-previous {
-  margin-right: 5px;
+a.slidesjs-next,
+a.slidesjs-previous,
+a.slidesjs-play,
+a.slidesjs-stop {
+  background-image: url(../images/btns-next-prev.png);
+  background-repeat: no-repeat;
+  display:block;
+  width:12px;
+  height:18px;
+  overflow: hidden;
+  text-indent: -9999px;
   float: left;
+  margin-right:5px;
 }
 
-#slides .slidesjs-next {
-  margin-right: 5px;
-  float: left;
+a.slidesjs-next {
+  margin-right:10px;
+  background-position: -12px 0;
+}
+
+a:hover.slidesjs-next {
+  background-position: -12px -18px;
+}
+
+a.slidesjs-previous {
+  background-position: 0 0;
+}
+
+a:hover.slidesjs-previous {
+  background-position: 0 -18px;
+}
+
+a.slidesjs-play {
+  width:15px;
+  background-position: -25px 0;
+}
+
+a:hover.slidesjs-play {
+  background-position: -25px -18px;
+}
+
+a.slidesjs-stop {
+  width:18px;
+  background-position: -41px 0;
+}
+
+a:hover.slidesjs-stop {
+  background-position: -41px -18px;
 }
 
 .slidesjs-pagination {
-  margin: 6px 0 0;
+  margin: 7px 0 0;
   float: right;
   list-style: none;
 }
@@ -40,23 +82,23 @@
 
 .slidesjs-pagination li a.active,
 .slidesjs-pagination li a:hover.active {
-  background-position: 0 -13px;
+  background-position: 0 -13px
 }
 
 .slidesjs-pagination li a:hover {
-  background-position: 0 -26px;
+  background-position: 0 -26px
 }
 
 #slides a:link,
 #slides a:visited {
-  color: #333;
+  color: #333
 }
 
 #slides a:hover,
 #slides a:active {
-  color: #9e2020;
+  color: #9e2020
 }
 
 .navbar {
-  overflow: hidden;
+  overflow: hidden
 }
