@@ -163,6 +163,10 @@ a:hover{
     height: 21px;
 }
 
+.pad{
+    margin: 20px 0;
+}
+
 /* Body content */
 .body{
     margin: 0 auto;
@@ -199,7 +203,7 @@ a:hover{
     border: 1px solid #999;
     background-color: #fff;
     box-shadow: 5px 5px 5px #888;
-    padding: 10px 20px;
+    padding: 20px;
 }
 
 ul.block-list{
@@ -208,12 +212,12 @@ ul.block-list{
 
 ul.block-list li{
     overflow: hidden;
-    padding: 10px 0;
+    //padding: 10px 0;
 }
 
 ul.block-list li:first-child
 {
-    padding: 0;
+    //padding: 0;
 }
 
 .address-container{

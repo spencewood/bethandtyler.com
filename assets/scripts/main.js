@@ -1,4 +1,4 @@
-(function () {
+(function ($) {
     var $rsvpLink = $('#rsvp-link');
     var $formContainer = $('#rsvpModal');
     var $form = $('form', $formContainer);
@@ -29,17 +29,13 @@
 
             $.post($form.attr('action'), $form.serialize())
                 .fail(function (res) {
-                    this.buttonReset();
                     this.showErrorMessage(res.responseText);
                 }.bind(this))
                 .success(function () {
-                    this.buttonReset();
-                    setTimeout(function () {
-                        //clear stack to avoid reseting disabled
-                        this.buttonDisable();
-                    }.bind(this), 100);
-                    
                     this.showStatusMessage('Added your response. Thanks!');
+                }.bind(this))
+                .complete(function () {
+                    this.buttonReset();
                 }.bind(this));
         },
 
@@ -77,19 +73,10 @@
             $('.alert', $formContainer).remove();
         },
 
-        validate: function () {
-            $('input[data-required]').each(function () {
-                var $el = $(this);
-                if($el.val().length === 0){
-                    
-                }
-            });
-        },
-
         show: function () {
             $formContainer.modal();
         }
     };
 
     rsvp.init();
-})();
+})(jQuery);

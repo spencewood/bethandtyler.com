@@ -3,3 +3,5 @@ destination: 'public'
 sass:
     syntax: scss
     style: compressed
+prod_guest_form_url: http://api.bethandtyler.com/guest
+dev_guest_form_url: http://localhost:5000/guest
