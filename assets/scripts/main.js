@@ -1,7 +1,7 @@
 (function ($) {
     var $rsvpLink = $('#rsvp-link');
-    var $formContainer = $('#rsvpModal');
-    var $form = $('form', $formContainer);
+    var $modal = $('#rsvpModal');
+    var $form = $('form', $modal);
 
     var rsvp = {
         init: function () {
@@ -11,6 +11,7 @@
         bindEvents: function (){
             $rsvpLink.on('click', this.showEvent.bind(this));
             $form.on('submit', this.submitEvent.bind(this));
+            $modal.on('hide', this.clearForm);
         },
 
         showEvent: function (e){
@@ -29,7 +30,7 @@
 
             $.post($form.attr('action'), $form.serialize())
                 .fail(function (res) {
-                    this.showErrorMessage(res.responseText);
+                    this.showErrorMessage(res.responseText, res.status);
                 }.bind(this))
                 .success(function () {
                     this.showStatusMessage('Added your response. Thanks!');
@@ -39,7 +40,14 @@
                 }.bind(this));
         },
 
-        showErrorMessage: function (message) {
+        showErrorMessage: function (message, status) {
+            if(typeof message === 'undefined'){
+                message = 'Something unexpected happened! Please try again later.';
+            }
+            switch(status){
+            case 409:
+                message += ' Need to change something? Contact Tyler (tcollard@gmail.com).';
+            }
             this.showMessage(message, 'alert alert-error');
         },
 
@@ -48,33 +56,46 @@
         },
 
         showMessage: function (message, cls) {
-            $('.modal-body', $formContainer).prepend($('<div>', {
+            $('.modal-body', $modal).prepend($('<div>', {
                 'class': cls,
                 text: message
             }));
         },
 
         buttonLoad: function () {
-            $('button[type=submit]', $formContainer).button('loading');
+            $('button[type=submit]', $modal).button('loading');
             return this;
         },
 
         buttonReset: function () {
-            $('button[type=submit]', $formContainer).button('reset');
+            $('button[type=submit]', $modal).button('reset');
             return this;
         },
 
         buttonDisable: function () {
-            $('button[type=submit]', $formContainer).prop('disabled', true);
+            $('button[type=submit]', $modal).prop('disabled', true);
             return this;
         },
 
         clearMessage: function () {
-            $('.alert', $formContainer).remove();
+            $('.alert', $modal).remove();
+        },
+
+        clearForm: function () {
+            $('input, textarea', $form).each(function () {
+                switch($(this).prop('type')){
+                case 'number':
+                    $(this).val(0);
+                    break;
+                default:
+                    $(this).val('');
+                    break;
+                }
+            });
         },
 
         show: function () {
-            $formContainer.modal();
+            $modal.modal();
         }
     };
 
