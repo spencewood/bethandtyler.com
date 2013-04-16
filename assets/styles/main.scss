@@ -202,7 +202,7 @@ a:hover{
     margin-bottom: 60px;
 }
 
-.body section .block{
+section .block{
     color: $mid_gray;
     -moz-border-radius: 15px;
     border-radius: 15px;
@@ -210,6 +210,11 @@ a:hover{
     background-color: #fff;
     box-shadow: 5px 5px 5px #888;
     padding: 20px;
+    overflow: hidden;
+}
+
+.body section .block-content{
+    color: $dark_gray;
 }
 
 ul.block-list{
