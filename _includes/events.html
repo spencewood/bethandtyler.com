@@ -6,32 +6,42 @@
     <!-- TODO: add links to events -->
     <!-- TODO: mention things about parking, no restrooms, and more event details per -->
     <li>
-        <div class="box {{page.events.ceremony.image}}"></div>
-        <h3>Ceremony</h3>
-        <h4>{{page.events.ceremony.name}}</h4>
-        <div class="address-container">
-            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld={{page.events.ceremony.pinlabel}}|{{page.events.ceremony.pinhex}}|000000">
-            <address>
-                <div>{{page.events.ceremony.address1}}</div>
-                <div>{{page.events.ceremony.address2}}</div>
-            </address>
+        <div class="event-container">
+            <div class="box {{page.events.ceremony.image}}"></div>
+            <h3>Ceremony</h3>
+            <h4><a href="{{page.events.ceremony.link}}">{{page.events.ceremony.name}}</a></h4>
+            <div class="address-container">
+                <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld={{page.events.ceremony.pinlabel}}|{{page.events.ceremony.pinhex}}|000000">
+                <address>
+                    <div>{{page.events.ceremony.address1}}</div>
+                    <div>{{page.events.ceremony.address2}}</div>
+                </address>
+            </div>
+            <span class="label">{{page.events.ceremony.time}}</span>
         </div>
-        <span class="label">{{page.events.ceremony.time}}</span>
+        <div>
+            {{page.events.ceremony.details | markdownify}}
+        </div>
     </li>
     <li>
-        <div class="tildes pad"></div>
+        <div class="tildes"></div>
     </li>
     <li>
-        <div class="box {{page.events.celebration.image}}"></div>
-        <h3>Celebration</h3>
-        <h4>{{page.events.celebration.name}}</h4>
-        <div class="address-container">
-            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld={{page.events.celebration.pinlabel}}|{{page.events.celebration.pinhex}}|000000">
-            <address>
-                <div>{{page.events.celebration.address1}}</div>
-                <div>{{page.events.celebration.address2}}</div>
-            </address>
+        <div class="event-container">
+            <div class="box {{page.events.celebration.image}}"></div>
+            <h3>Celebration</h3>
+            <h4><a href="{{page.events.celebration.link}}">{{page.events.celebration.name}}</a></h4>
+            <div class="address-container">
+                <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld={{page.events.celebration.pinlabel}}|{{page.events.celebration.pinhex}}|000000">
+                <address>
+                    <div>{{page.events.celebration.address1}}</div>
+                    <div>{{page.events.celebration.address2}}</div>
+                </address>
+            </div>
+            <span class="label">{{page.events.celebration.time}}</span>
         </div>
-        <span class="label">{{page.events.celebration.time}}</span>
+        <div>
+            {{page.events.celebration.details | markdownify}}
+        </div>
     </li>
 </ul>

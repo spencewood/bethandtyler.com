@@ -3,19 +3,24 @@
     {% for hotel in page.hotels %}
     {% if hotel.visible %}
     <li>
-        <img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:{{hotel.pincolor}}%7Clabel:{{hotel.pinlabel}}%7C{{hotel.latlng}}&markers=color:{{page.events.ceremony.pincolor}}%7Clabel:{{page.events.ceremony.pinlabel}}%7C{{page.events.ceremony.latlng}}&markers=color:{{page.events.celebration.pincolor}}%7Clabel:{{page.events.celebration.pinlabel}}%7C{{page.events.celebration.latlng}}{% if page.rehersal.visible %}&markers=color:{{page.rehersal.pincolor}}%7Clabel:{{page.rehersal.pinlabel}}%7C{{page.rehersal.latlng}}{% endif %}&zoom=14&size=220x200&sensor=false" class="map">
-        <h3>{{hotel.name}}</h3>
-        <a href="{{hotel.link.href}}" target="_blank">{{hotel.link.text}}</a>
-        <div class="address-container">
-            <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&chld={{hotel.pinlabel}}|{{hotel.pinhex}}|000000">
-            <address>
-                <div>{{hotel.address1}}</div>
-                <div>{{hotel.address2}}</div>
-            </address>
+        <div class="hotel-container">
+            <img src="http://maps.googleapis.com/maps/api/staticmap?markers=color:{{hotel.pincolor}}%7Clabel:{{hotel.pinlabel}}%7C{{hotel.latlng}}&amp;markers=color:{{page.events.ceremony.pincolor}}%7Clabel:{{page.events.ceremony.pinlabel}}%7C{{page.events.ceremony.latlng}}&amp;markers=color:{{page.events.celebration.pincolor}}%7Clabel:{{page.events.celebration.pinlabel}}%7C{{page.events.celebration.latlng}}{% if page.rehersal.visible %}&amp;markers=color:{{page.rehersal.pincolor}}%7Clabel:{{page.rehersal.pinlabel}}%7C{{page.rehersal.latlng}}{% endif %}&amp;zoom=14&amp;size=220x200&amp;sensor=false" class="map">
+            <h3><a href="{{hotel.link}}">{{hotel.name}}</a></h3>
+            <a href="{{hotel.link.href}}" target="_blank">{{hotel.link.text}}</a>
+            <div class="address-container">
+                <img class="pin" src="https://chart.googleapis.com/chart?chst=d_map_pin_letter&amp;chld={{hotel.pinlabel}}|{{hotel.pinhex}}|000000">
+                <address>
+                    <div>{{hotel.address1}}</div>
+                    <div>{{hotel.address2}}</div>
+                </address>
+            </div>
+            {% for label in hotel.labels %}
+            <span class="label label-{{label.type}}">{{label.text}}</span>
+            {% endfor %}
         </div>
-        {% for label in hotel.labels %}
-        <span class="label label-{{label.type}}">{{label.text}}</span>
-        {% endfor %}
+        <div>
+            {{hotel.details | markdownify}}
+        </div>
     </li>
     {% endif %}
     {% endfor %}

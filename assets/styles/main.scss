@@ -33,12 +33,16 @@ address{
 }
 
 a{
-    color: $blue;
+    color: $gray;
+    text-decoration: underline;
+}
+
+a.btn{
     text-decoration: none;
 }
 
 a:hover{
-    text-decoration: underline;
+    color: $blue;
 }
 
 /* Positioning containers */
@@ -162,6 +166,7 @@ a:hover{
     background-image: url(../images/tilde.png);
     background-repeat: repeat;
     height: 21px;
+    margin: 0 0 20px 0;
 }
 
 .pad{
@@ -274,6 +279,19 @@ ul.event-list .box{
     float: right;
 }
 
+.event-list p{
+    margin: 20px 0 0 0 ;
+}
+
+.event-container{
+    overflow: hidden;
+}
+
+.event-container h3,
+.event-container h4{
+    margin: 3px 0;
+}
+
 .event-date{
     position: absolute;
     bottom: 10px;
@@ -299,8 +317,16 @@ ul.hotel-list .map{
     float: left;
     -moz-border-radius: 15px;
     border-radius: 15px;
-    margin-right: 10px;
+    margin-right: 20px;
     border: 1px solid $mid_gray;
+}
+
+.hotel-list p{
+    margin: 20px 0 0 0;
+}
+
+.hotel-container{
+    overflow: hidden;
 }
 
 /* Gifts */
@@ -319,6 +345,6 @@ footer .heart{
     font-family: sans-serif;
 }
 
-footer a, footer a:hover{
+footer a{
     color: #353535;
 }
