@@ -15,6 +15,7 @@
             $rsvpLink.on('click', this.showEvent.bind(this));
             $form.on('submit', this.submitEvent.bind(this));
             $modal.on('hide', this.clearForm);
+            $modal.on('hide', this.clearMessage);
         },
 
         showEvent: function (e){
