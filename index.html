@@ -16,6 +16,13 @@ slideshow:
      - src: http://placehold.it/940x528
      - src: http://placehold.it/940x528
 
+about:
+    visible: true
+    text: |
+        Did that? Great. Wondering who we are or how we decided to get married? Well we both moved to Colorado in 2007. We met through mutual friends at a comedy club and hit it off immediately. In 2009 we moved back to Beth's home state of Minnesota. Beth supervises at a local nonprofit and Tyler is a web developer. We adopted a hedgehog who they named Mumford who you can see here. 
+
+        After almost 5 years of dating Tyler popped the question in the middle of the winter kneeling in the snow at Irvine Park in Saint Paul, and we decided right then and there that we would get married there in the park. We are very excited and hope you can help us celebrate!
+
 events:
     visible: true
     ceremony:
@@ -98,27 +105,45 @@ gifts:
         </div>
     </div>
     <div class="body">
+        <!-- Intro -->
+        {% if page.intro.visible %}
+        <section>
+            {% include intro.html %}
+        </section>
+        {% endif %}
+
+        <!-- Slideshow -->
         {% if page.slideshow.visible %}
         <section>
             {% include image-slideshow.html %}
         </section>
         {% endif %}
+
+        <!-- RSVP -->
         <section>
             {% include rsvp.html %}
         </section>
-        {% if page.rehersal.visible %}
+
+        <!-- About -->
+        {% if page.about.visible %}
         <section>
-            {% include rehersal.html %}
+            {% include about.html %}
         </section>
         {% endif %}
+
+        <!-- Events -->
         {% if page.events.visible %}
         <section>
             {% include events.html %}
         </section>
         {% endif %}
+
+        <!-- Accommodations -->
         <section>
             {% include accommodations.html %}
         </section>
+
+        <!-- Gifts -->
         {% if page.gifts.visible %}
         <section>
             {% include gifts.html %}

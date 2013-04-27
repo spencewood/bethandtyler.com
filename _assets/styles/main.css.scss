@@ -54,7 +54,7 @@ a:hover{
 #container{
     min-height: 100%;
     background-color: $yellow;
-    /* background-image: url(../images/paper_fibers.png); */
+    /* background-image: url(./images/paper_fibers.png); */
 }
 
 .top-container{
@@ -160,15 +160,15 @@ a:hover{
 
 /* Box pics */
 .box.fountain{
-    background-image: url(../images/fountain.png);
+    background-image: url(./images/fountain.png);
 }
 
 .box.caves{
-    background-image: url(../images/caves.png);
+    background-image: url(./images/caves.png);
 }
 
 .tildes{
-    background-image: url(../images/tilde.png);
+    background-image: url(./images/tilde.png);
     background-repeat: repeat;
     height: 21px;
     margin: 0 0 20px 0;
