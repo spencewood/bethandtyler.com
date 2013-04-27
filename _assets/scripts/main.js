@@ -91,6 +91,9 @@
                 case 'number':
                     $(this).val(0);
                     break;
+                case 'checkbox':
+                    $(this).prop('checked', true);
+                    break;
                 default:
                     $(this).val('');
                     break;
