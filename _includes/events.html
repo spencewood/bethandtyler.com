@@ -3,8 +3,6 @@
     <h2>Event Details</h2>
 </div>
 <ul class="block block-list event-list">
-    <!-- TODO: add links to events -->
-    <!-- TODO: mention things about parking, no restrooms, and more event details per -->
     <li>
         <div class="event-container">
             <div class="box {{page.events.ceremony.image}}"></div>
@@ -19,7 +17,7 @@
             </div>
             <span class="label">{{page.events.ceremony.time}}</span>
         </div>
-        <div class="block-content mono">
+        <div class="block-content">
             {{page.events.ceremony.details | markdownify}}
         </div>
     </li>
@@ -40,7 +38,7 @@
             </div>
             <span class="label">{{page.events.celebration.time}}</span>
         </div>
-        <div class="block-content mono">
+        <div class="block-content">
             {{page.events.celebration.details | markdownify}}
         </div>
     </li>

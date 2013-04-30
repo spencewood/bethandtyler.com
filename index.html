@@ -3,12 +3,12 @@ layout: default
 title: "{ Beth &amp; Tyler }"
 
 intro:
-    visible: false
+    visible: true
     text: |
         Beth Howard and Tyler Collard have decided to tie the knot! Congratulations on finding the site.
 
 slideshow:
-    visible: false
+    visible: true
     images:
      - src: http://placehold.it/940x528
      - src: http://placehold.it/940x528
@@ -17,7 +17,7 @@ slideshow:
      - src: http://placehold.it/940x528
 
 about:
-    visible: false
+    visible: true
     text: |
         Did that? Great. Wondering who we are or how we decided to get married? Well we both moved to Colorado in 2007. We met through mutual friends at a comedy club and hit it off immediately. In 2009 we moved back to Beth's home state of Minnesota. Beth supervises at a local nonprofit and Tyler is a web developer. We adopted a hedgehog who they named Mumford who you can see here. 
 
@@ -37,9 +37,13 @@ events:
         pinhex: FE6256
         pinlabel: A
         details: |
-            Irvine park is a small city park with limited parking and no bathrooms. If you chose to drive leave plenty of time to find parking. We will have a limited number of parking permits for spaces on the road surrounding the park for those who need it. If you prefer to join us at the reception we will not be offended!
+            Irvine park is a small city park with limited parking and no bathrooms. Be sure to leave plenty of time to find parking if you drive. If you are staying in the Crown hotel, there will be shuttles provided. If you prefer the local bus, the park is on [4 local bus lines](http://metrotransit.org/TripPlanner/NearestLandmarkResult.aspx?strOrig=irvine+park&amp;cat=SVC).
 
-            In case of severe weather &mdash; see below
+            We will have a limited number of parking permits for spaces on the road surrounding the park.
+
+            If this all sounds too complicated and you prefer to join us at the reception we will not be offended!
+
+            *In case of severe weather, we will move the ceremony to the reception site at 5:30 &mdash; see below.*
     celebration:
         name: Wabasha Street Caves
         link: http://www.wabashastreetcaves.com
@@ -52,7 +56,13 @@ events:
         pinhex: 43AAFD
         pinlabel: B
         details: |
-            In case of severe weather the ceremony will also be held to the Wabasha Caves, and moved to 5:30 pm. The caves are close enough that you can drive by the park and if we aren't there, you can make it to the caves in time for the ceremony.
+            The Wabasha Street Caves were a working speakeasy run by gangsters in the 1920s. It is a man made cave so don't expect stalactites. It does have a stage, dance floor, and built-in bar.
+
+            We will be having a "gangster tour" of the caves to start the reception, it will be the only opportunity to see the back caves so don't miss it!
+
+            The caves has 2 parking lots reserved only for this event.
+
+            We will have shuttles running back to the hotel for those who stay there.
 
 hotels:
   - name: Crowne Plaza
@@ -84,7 +94,6 @@ gifts:
         Beth &amp; Tyler
 ---
 
-<!-- TODO: might be nice to have scrollspy header -->
 <header class="top-container">
     <div class="bottom-line-container">
         <div class="name-container">
@@ -105,47 +114,49 @@ gifts:
         </div>
     </div>
     <div class="body">
-        <!-- Intro -->
-        {% if page.intro.visible %}
-        <section>
-            {% include intro.html %}
-        </section>
-        {% endif %}
+        <div class="inlay">
+            <!-- Intro -->
+            {% if page.intro.visible %}
+            <section>
+                {% include intro.html %}
+            </section>
+            {% endif %}
 
-        <!-- Slideshow -->
-        {% if page.slideshow.visible %}
-        <section>
-            {% include image-slideshow.html %}
-        </section>
-        {% endif %}
+            <!-- Slideshow -->
+            {% if page.slideshow.visible %}
+            <section>
+                {% include image-slideshow.html %}
+            </section>
+            {% endif %}
 
-        <!-- RSVP -->
-        <section>
-            {% include rsvp.html %}
-        </section>
+            <!-- RSVP -->
+            <section>
+                {% include rsvp.html %}
+            </section>
 
-        <!-- About -->
-        {% if page.about.visible %}
-        <section>
-            {% include about.html %}
-        </section>
-        {% endif %}
+            <!-- About -->
+            {% if page.about.visible %}
+            <section>
+                {% include about.html %}
+            </section>
+            {% endif %}
+        </div>
 
         <!-- Events -->
         {% if page.events.visible %}
-        <section>
+        <section class="center">
             {% include events.html %}
         </section>
         {% endif %}
 
         <!-- Accommodations -->
-        <section>
+        <section class="center">
             {% include accommodations.html %}
         </section>
 
         <!-- Gifts -->
         {% if page.gifts.visible %}
-        <section>
+        <section class="center">
             {% include gifts.html %}
         </section>
         {% endif %}

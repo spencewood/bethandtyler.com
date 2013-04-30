@@ -18,13 +18,10 @@
             <span class="label label-{{label.type}}">{{label.text}}</span>
             {% endfor %}
         </div>
-        <div class="block-content mono">
+        <div class="block-content">
             {{hotel.details | markdownify}}
         </div>
     </li>
     {% endif %}
     {% endfor %}
 </ul>
-
-<!-- TODO: mention shuttles -->
-<!-- TODO: mention group rates -->
