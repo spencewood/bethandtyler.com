@@ -17,7 +17,7 @@ slideshow:
      - src: http://placehold.it/940x528
 
 about:
-    visible: true
+    visible: false
     text: |
         Did that? Great. Wondering who we are or how we decided to get married? Well we both moved to Colorado in 2007. We met through mutual friends at a comedy club and hit it off immediately. In 2009 we moved back to Beth's home state of Minnesota. Beth supervises at a local nonprofit and Tyler is a web developer. We adopted a hedgehog who they named Mumford who you can see here. 
 
@@ -119,6 +119,7 @@ gifts:
             {% include rsvp.html %}
         </section>
         
+        {% if page.intro.visible or page.slideshow.visible or page.about.visible %}
         <div class="inlay">
             <!-- Intro -->
             {% if page.intro.visible %}
@@ -141,6 +142,7 @@ gifts:
             </section>
             {% endif %}
         </div>
+        {% endif %}
 
         <div class="section-head">
             <section>
