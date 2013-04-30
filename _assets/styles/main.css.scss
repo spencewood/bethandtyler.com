@@ -26,9 +26,26 @@ h1{
     display: none;
 }
 
+h2{
+    font-weight: 700;
+    font-size: 78px;
+    font-family: Tangerine;
+}
+
+h3{
+    font-size: 42px;
+}
+
 h4{
     font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+h5{
+    font-weight: bold;
     font-size: 26px;
+    line-height: 26px;
 }
 
 p{
@@ -200,15 +217,14 @@ a:hover{
     width: 140px;
 }
 
-.body h2{
-    font-weight: 700;
-    font-size: 42px;
-    color: #635f5d;
-    padding: 10px 0;
-}
-
 .body p{
     line-height: 25px;
+}
+
+.body h2,
+.body h3{
+    color: #635f5d;
+    padding: 10px 0;
 }
 
 .body section{
@@ -217,13 +233,24 @@ a:hover{
     padding-top: 20px;
 }
 
+.body .section-head{
+    background-color: $gray;
+    padding: 20px 0;
+    border-bottom: 1px solid $dark_gray;
+}
+
+.body .section-head h2{
+    padding: 0;
+    color: #fff;
+}
+
 .body .inlay{
     width: 100%;
     background: #efefef;
     color: $dark_gray;
     border-top: 1px solid $dark_gray;
-    border-bottom: 1px solid $dark_gray;
-    padding: 0 0 20px 0;
+    border-bottom: 1px solid #fff;
+    padding: 0 0 30px 0;
 }
 
 section .block{
@@ -289,6 +316,7 @@ ul.block-list li:first-child
 
 .rsvp-container{
     text-align: center;
+    padding-bottom: 30px;
 }
 
 /* Events */
@@ -299,7 +327,7 @@ ul.event-list{
 ul.event-list li{
 }
 
-ul.event-list li h3{
+ul.event-list li h4{
     font-family: 'Tangerine', cursive;
     font-size: 36px;
 }
@@ -316,8 +344,8 @@ ul.event-list .box{
     overflow: hidden;
 }
 
-.event-container h3,
-.event-container h4{
+.event-container h4,
+.event-container h5{
     margin: 3px 0;
 }
 

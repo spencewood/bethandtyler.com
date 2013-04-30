@@ -114,6 +114,11 @@ gifts:
         </div>
     </div>
     <div class="body">
+        <!-- RSVP -->
+        <section>
+            {% include rsvp.html %}
+        </section>
+        
         <div class="inlay">
             <!-- Intro -->
             {% if page.intro.visible %}
@@ -129,17 +134,18 @@ gifts:
             </section>
             {% endif %}
 
-            <!-- RSVP -->
-            <section>
-                {% include rsvp.html %}
-            </section>
-
             <!-- About -->
             {% if page.about.visible %}
             <section>
                 {% include about.html %}
             </section>
             {% endif %}
+        </div>
+
+        <div class="section-head">
+            <section>
+                <h2>What / When / How</h2>
+            </section>
         </div>
 
         <!-- Events -->
