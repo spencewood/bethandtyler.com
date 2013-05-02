@@ -5,7 +5,7 @@ title: "{ Beth &amp; Tyler }"
 intro:
     visible: true
     text: |
-        Beth Howard and Tyler Collard have decided to tie the knot! Congratulations on finding the site.
+        Beth Howard and Tyler Collard have decided to tie the knot!
 
 slideshow:
     visible: false
@@ -17,11 +17,11 @@ slideshow:
      - src: http://placehold.it/940x528
 
 about:
-    visible: false
+    visible: true
     text: |
-        Did that? Great. Wondering who we are or how we decided to get married? Well we both moved to Colorado in 2007. We met through mutual friends at a comedy club and hit it off immediately. In 2009 we moved back to Beth's home state of Minnesota. Beth supervises at a local nonprofit and Tyler is a web developer. We adopted a hedgehog who they named Mumford who you can see here. 
+        Wondering who we are or how we decided to get married? Well we both moved to Colorado in 2007. We met through mutual friends at a comedy club and hit it off immediately. In 2009 we moved back to Beth's home state of Minnesota. Beth supervises at a local nonprofit and Tyler is a web developer. We adopted a hedgehog who they named Mumford who you can see [here](http://www.mumfordthehedgehog.com). 
 
-        After almost 5 years of dating Tyler popped the question in the middle of the winter kneeling in the snow at Irvine Park in Saint Paul, and we decided right then and there that we would get married there in the park. We are very excited and hope you can help us celebrate!
+        After almost 5 years of dating Tyler popped the question in the middle of the winter kneeling in the snow at Irvine Park in Saint Paul. We decided right then and there that we would get married there in the park. We are very excited and hope you can help us celebrate!
 
 events:
     visible: true
@@ -84,12 +84,24 @@ hotels:
     details: |
         For the discounted rate of $99/night and $10/day parking, call [651-292-1900](tel:651-292-1900) and ask for the Collard/Howard wedding block by June 6th. Shuttles will be provided, check back here closer to the wedding date for a shuttle schedule.
 
+faq:
+    visible: true
+    faqs:
+      - question: So, is Beth changing her name?
+        answer: Yes, and so is Tyler. It is important to us that we have the same name, but liked the idea of creating something new together. Since "Coward" wasn't our favorite idea, we decided to combine our middle names which is also both of our mother's last names (Southwood and Spencer). After the wedding our last names will become our middle names and our last name will be "Spencewood". Let the paperwork begin.
+      - question: What should I expect?
+        answer: The ceremony is outside and will be fairly short. The reception will start right after the ceremony and will start with a tour of the caves so make sure to get there in time, you won't want to miss it. 
+      - question: When will the shuttles run?
+        answer: That will be posted here closer to the event.
+      - question: Will there be food?
+        answer: "We will be serving Tyler's favorite wedding food at the reception: a taco buffet."
+
 gifts:
     visible: true
     text: |
         Dear friends and family,
 
-        Your presence at our wedding is gift enough, but if you do wish to celebrate our wedding with a gift, a contribution towards our dream of traveling in Asia for our honeymoon would be appreciated. We are also registered at [REI](http://www.rei.com), [Crate and Barrel](http://www.crateandbarrel.com/), and [Amazon](http://www.amazon.com/gp/registry/registry.html?ie=UTF8&amp;id=20W99LYEII86P&amp;type=wedding).
+        Your presence at our wedding is gift enough! If you do wish to celebrate our wedding with a gift, a contribution towards our dream of traveling in Asia would be appreciated. We are also registered at [REI](http://www.rei.com), [Crate and Barrel](http://www.crateandbarrel.com/), and [Amazon](http://www.amazon.com/gp/registry/registry.html?ie=UTF8&amp;id=20W99LYEII86P&amp;type=wedding).
 
         Beth &amp; Tyler
 ---
@@ -161,6 +173,13 @@ gifts:
         <section class="center">
             {% include accommodations.html %}
         </section>
+
+        <!-- FAQs -->
+        {% if page.faq.visible %}
+        <section class="center">
+            {% include faqs.html %}
+        </section>
+        {% endif %}
 
         <!-- Gifts -->
         {% if page.gifts.visible %}

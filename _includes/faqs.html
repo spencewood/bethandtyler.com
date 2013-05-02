@@ -1,0 +1,9 @@
+<h3>FAQs</h3>
+<div class="block block-content">
+    {% for faq in page.faq.faqs %}
+    <dl>
+        <dt>{{faq.question}}</dt>
+        <dd>{{faq.answer | markdownify}}</dd>
+    </dl>
+    {% endfor %}
+<div>
