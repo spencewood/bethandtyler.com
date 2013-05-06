@@ -53,6 +53,10 @@ p{
     font-family: Arial;
 }
 
+em{
+    font-weight: bold;
+}
+
 address{
     font-style: italic;
     padding: 5px;
@@ -265,6 +269,11 @@ section .block{
 
 .body section .block-content{
     color: $dark_gray;
+}
+
+.body section .block-content dt{
+    font-size: 16px;
+    padding-bottom: 10px;
 }
 
 ul.block-list{
