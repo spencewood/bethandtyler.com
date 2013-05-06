@@ -1,11 +1,17 @@
 <h3>What To Do</h3>
 <div class="block block-content">
-    <p>What is there to do in the Twin Cities? Lots! If you are around the night before the wedding, there will be 4th of July fireworks on Harriet Island, within walking distance of the hotel.</p>
+    <p>What is there to do around town? Lots! If you are around the night before the wedding, there will be 4th of July fireworks on Harriet Island, within walking distance of the hotel.</p>
     <p>From out of town? Looking for something else to do in the Twin Cities?</p>
 
     {% for todo in page.todo.todos %}
     <dl>
-        <dt>{{todo.name}}</dt>
+        <dt>
+            {% if todo.link %}
+                <a href="{{todo.link}}">{{todo.name}} <i class="icon-share"></i></a>
+            {% else %}
+                {{todo.name}}
+            {% endif %}
+        </dt>
         <dd> {{todo.description | markdownify}}</dd>
     </dl>
     {% endfor %}
