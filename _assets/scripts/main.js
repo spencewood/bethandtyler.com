@@ -32,8 +32,11 @@
             this.clearMessage();
             this.buttonLoad();
 
-            $.post($form.attr('action'), $form.serialize())
-                .fail(function (res) {
+            $.ajax({
+                url: $form.attr('action'),
+                data: $form.serialize(),
+                type: 'POST'
+            }).fail(function (res) {
                     this.showErrorMessage(res.responseText, res.status);
                 }.bind(this))
                 .success(function () {
