@@ -35,20 +35,22 @@
             $.ajax({
                 url: $form.attr('action'),
                 data: $form.serialize(),
-                type: 'POST'
-            }).fail(function (res) {
-                    this.showErrorMessage(res.responseText, res.status);
-                }.bind(this))
-                .success(function () {
+                type: 'POST',
+                dataType: 'text',
+                success: function () {
                     this.showStatusMessage('Added your response. Thanks!');
-                }.bind(this))
-                .complete(function () {
+                }.bind(this),
+                error: function (res) {
+                    this.showErrorMessage(res.responseText, res.status);
+                }.bind(this),
+                complete: function () {
                     this.buttonReset();
-                }.bind(this));
+                }.bind(this)
+            });
         },
 
         showErrorMessage: function (message, status) {
-            if(message.length === 0){
+            if(typeof message === 'undefined' || message.length === 0){
                 message = 'Something unexpected happened! Please try again later.';
             }
             switch(status){
