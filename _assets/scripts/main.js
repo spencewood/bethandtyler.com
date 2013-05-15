@@ -37,6 +37,7 @@
                 data: $form.serialize(),
                 type: 'POST',
                 dataType: 'text',
+                contentType: 'application/x-www-form-urlencoded; charset=UTF-8',
                 success: function () {
                     this.showStatusMessage('Added your response. Thanks!');
                 }.bind(this),
