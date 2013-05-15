@@ -14,6 +14,8 @@ if ( window.XDomainRequest ) {
                         complete( status, statusText, responses, responseHeaders );
                     }
                     xdr = new XDomainRequest();
+                    xdr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                    
                     xdr.onload = function() {
                         callback( 200, "OK", { text: xdr.responseText }, "Content-Type: " + xdr.contentType );
                     };
