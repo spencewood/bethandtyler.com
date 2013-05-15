@@ -45,7 +45,7 @@
         },
 
         showErrorMessage: function (message, status) {
-            if(message.length === 0){
+            if(typeof message !== 'undefined' && message.length === 0){
                 message = 'Something unexpected happened! Please try again later.';
             }
             switch(status){
