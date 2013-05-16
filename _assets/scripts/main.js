@@ -44,7 +44,8 @@
                     console.log(JSON.stringify(res), status, err);
                     this.showErrorMessage(res.responseText, res.status);
                 }.bind(this),
-                complete: function () {
+                complete: function (xhr) {
+                    console.log('complete', JSON.stringify(xhr));
                     this.buttonReset();
                 }.bind(this)
             });
