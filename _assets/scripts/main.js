@@ -37,15 +37,20 @@
                 data: $form.serialize(),
                 type: 'POST',
                 dataType: 'text',
-                success: function () {
-                    this.showStatusMessage('Added your response. Thanks!');
+                success: function (data) {
+                    console.log(JSON.stringify(data));
+                    if(typeof window.XDomainRequest !== 'undefined' && data.length > 0){
+                        //IE is being used and this is an error instead of a success
+                        this.showErrorMessage(data);
+                    }
+                    else{
+                        this.showStatusMessage('Added your response. Thanks!');
+                    }
                 }.bind(this),
                 error: function (res, status, err) {
-                    console.log(JSON.stringify(res), status, err);
                     this.showErrorMessage(res.responseText, res.status);
                 }.bind(this),
                 complete: function (xhr) {
-                    console.log('complete', JSON.stringify(xhr));
                     this.buttonReset();
                 }.bind(this)
             });
