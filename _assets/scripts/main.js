@@ -40,8 +40,8 @@
                 success: function () {
                     this.showStatusMessage('Added your response. Thanks!');
                 }.bind(this),
-                error: function (res) {
-                    console.log(JSON.stringify(res));
+                error: function (res, status, err) {
+                    console.log(JSON.stringify(res), status, err);
                     this.showErrorMessage(res.responseText, res.status);
                 }.bind(this),
                 complete: function () {
