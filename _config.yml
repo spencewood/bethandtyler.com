@@ -1,4 +1,4 @@
 exclude: ['public', 'bin', 'vendor', 'Gemfile', 'Gemfile.lock', 'Procfile', 'Rakefile', 'unicorn.rb', 'config.ru', 'README.md']
 destination: 'public'
-prod_guest_form_url: http://api.bethandtyler.com/guest
-dev_guest_form_url: http://localhost:5000/guest
+prod_guest_form_url: http://api.bethandtyler.com/guests
+dev_guest_form_url: http://localhost:5000/guests

@@ -38,7 +38,6 @@
                 type: 'POST',
                 dataType: 'text',
                 success: function (data) {
-                    console.log(JSON.stringify(data));
                     if(typeof window.XDomainRequest !== 'undefined' && data.length > 0){
                         //IE is being used and this is an error instead of a success
                         this.showErrorMessage(data);
