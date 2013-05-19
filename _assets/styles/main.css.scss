@@ -326,6 +326,10 @@ ul.block-list li:first-child
     margin: 0;
 }
 
+#rsvpModal .modal-body{
+    max-height: 435px;
+}
+
 .rsvp-container{
     text-align: center;
     padding-bottom: 30px;
@@ -429,3 +433,5 @@ footer a{
        -moz-border-radius: 8px;
             border-radius: 8px;
 }
+
+/* Modal */
