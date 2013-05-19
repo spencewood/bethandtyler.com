@@ -16,6 +16,7 @@
             $form.on('submit', this.submitEvent.bind(this));
             $modal.on('hide', this.clearForm);
             $modal.on('hide', this.clearMessage);
+            $modal.on('change', '[name=attending]', this.updateAttending.bind(this));
         },
 
         showEvent: function (e){
@@ -110,6 +111,25 @@
                     break;
                 }
             });
+        },
+
+        updateAttending: function (e) {
+            var checked = e.currentTarget.value === 'true';
+
+            var checks = [
+                ':checkbox[name=isAttendingCeremony]',
+                ':checkbox[name=isAttendingReception]'
+            ];
+
+            //update checkboxes
+            $(checks.join(', '), $modal)
+                .prop('checked', checked)
+                .prop('disabled', !checked);
+
+            //update attending to 0
+            $('input[name=additionalCount]', $modal)
+                .val(0)
+                .prop('disabled', !checked);
         },
 
         show: function () {
